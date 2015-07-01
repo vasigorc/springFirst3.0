@@ -6,11 +6,13 @@
 package com.vgorcinschi.springfirst.model.Stories;
 
 import com.vgorcinschi.springfirst.model.*;
+import java.util.List;
 
 /**
  *
  * @author vgorcinschi
  */
 public interface Storey {
-    public Office getOffice();
+    public List <Office> getOffices();
+
 }

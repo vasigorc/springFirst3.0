@@ -22,6 +22,12 @@ public class HexagonalOffice extends Office{
         this.shape = "Hexagon";
     }
 
+    public HexagonalOffice(int ofNum){
+        super();
+        this.shape = "Hexagon";
+        this.officeNumber = ofNum;
+    }
+
     @Override
     public String getShape() {
         return shape;

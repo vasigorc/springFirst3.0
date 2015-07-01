@@ -20,8 +20,14 @@ public class SquareOffice extends Office{
     public SquareOffice() {
         super();
         this.shape = "Square";
-    }    
-    
+    }
+
+    public SquareOffice(int ofNum){
+        super();
+        this.shape = "Square";
+        this.officeNumber = ofNum;
+    }
+
     @Override
     public String getShape() {
         return shape;

@@ -10,24 +10,21 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 /**
  *
  * @author vgorcinschi
  */
-@Component
-@Qualifier("ground")
 public class GroundFloor implements Storey {
-    private Office office;
+    private List <Office> offices;
 
-    @Autowired    
-    public GroundFloor(
-            @Qualifier("circle") Office office) {
-        this.office = office;
+    public GroundFloor(List <Office> offices) {
+        this.offices = offices;
     }
-        
+
     @Override
-    public Office getOffice() {
-        return office;
+    public List<Office> getOffices(){
+        return offices;
     }
-    
 }

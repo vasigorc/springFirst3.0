@@ -30,11 +30,10 @@ public class BuildingTest {
             new StandardOutputStreamLog();
     
     @Autowired
-    @Qualifier("ground")
     private Building building;
     
     @Autowired
-    @Qualifier("circle")
+    @Qualifier("ground")
     private Storey storey;
     
     @Test
@@ -44,6 +43,6 @@ public class BuildingTest {
     
     @Test
     public void getShape(){        
-        assertEquals("Circle", building.getFirst().getOffice().getShape());
+        assertEquals("Circle", building.getGround().getOffices().get(0).getShape());
     }
 }

@@ -32,6 +32,14 @@ public class Building {
         this.ground = ground;
     }
 
+    public Building(Storey ground, Storey first){
+        this.name = "Montreal Startup";
+        this.address = "200 Rene Levesque Ouest,\n" +
+                "Montreal, QC";
+        this.ground = ground;
+        this.first = first;
+    }
+
     public String getName() {
         return name;
     }
@@ -60,26 +68,22 @@ public class Building {
         return fourth;
     }
 
-    @Autowired
-    @Qualifier("first")
+
     public void setFirst(Storey first) {
         this.first = first;
     }
 
-    @Autowired
-    @Qualifier("second")
+
     public void setSecond(Storey second) {
         this.second = second;
     }
 
-    @Autowired
-    @Qualifier("third")
+
     public void setThird(Storey third) {
         this.third = third;
     }
 
-    @Autowired
-    @Qualifier("fourth")
+
     public void setFourth(Storey fourth) {
         this.fourth = fourth;
     }

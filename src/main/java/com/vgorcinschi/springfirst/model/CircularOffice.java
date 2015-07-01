@@ -21,6 +21,12 @@ public class CircularOffice extends Office{
         super();
         this.shape = "Circle";
     }
+
+    public CircularOffice(int ofNum){
+        super();
+        this.shape = "Circle";
+        this.officeNumber = ofNum;
+    }
     
     @Override
     public String getShape() {

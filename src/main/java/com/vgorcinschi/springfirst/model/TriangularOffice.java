@@ -21,7 +21,13 @@ public class TriangularOffice extends Office{
         super();
         this.shape = "Triangle";
     }
-    
+
+    public TriangularOffice(int ofNum){
+        super();
+        this.shape = "Triangle";
+        this.officeNumber = ofNum;
+    }
+
     @Override
     public String getShape() {
         return shape;

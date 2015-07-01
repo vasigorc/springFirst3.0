@@ -21,6 +21,12 @@ public class RectangularOffice extends Office{
         super();
         this.shape = "Rectangle";
     }
+
+    public RectangularOffice(int ofNum){
+        super();
+        this.shape = "Rectangle";
+        this.officeNumber = ofNum;
+    }
     
     @Override
     public String getShape() {

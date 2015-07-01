@@ -10,6 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 /**
  *
  * @author vgorcinschi
@@ -17,17 +19,16 @@ import org.springframework.stereotype.Component;
 @Component
 @Qualifier("third")
 public class ThirdFloor implements Storey{
-    private Office office;
+    private List<Office> offices;
 
     @Autowired
-    public ThirdFloor(
-            @Qualifier("triangle") Office office) {
-        this.office = office;
+    public ThirdFloor(List<Office> offices) {
+        this.offices = offices;
     }
-    
+
     @Override
-    public Office getOffice() {
-        return office;
+    public List<Office> getOffices(){
+        return offices;
     }
     
 }

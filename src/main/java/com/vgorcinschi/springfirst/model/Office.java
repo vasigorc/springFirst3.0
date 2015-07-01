@@ -19,6 +19,7 @@ public abstract class Office {
     private final boolean CONFERENCE_ROOM = true;
     private final boolean RECEPTION = true;
     private boolean wifi;
+    protected int officeNumber;
     
     /** Construct a default office*/    
     protected Office() {
@@ -57,4 +58,12 @@ public abstract class Office {
      *office
      * @return shape peculiar to each floor*/
     public abstract String getShape();
+
+    public int getOfficeNumber() {
+        return officeNumber;
+    }
+
+    public void setOfficeNumber(int officeNumber) {
+        this.officeNumber = officeNumber;
+    }
 }
